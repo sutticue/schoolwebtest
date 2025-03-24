@@ -1,0 +1,236 @@
+:root {
+    --primary: #FF6B00;    /* สีส้ม */
+    --secondary: #212529;  /* สีดำ */
+    --light: #ffffff;      /* สีขาว */
+    --orange-light: #FFB88C;
+    --orange-dark: #E65100;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ปรับสีปุ่มหลักให้เป็นสีส้ม */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+    background-color: var(--orange-dark);
+    border-color: var(--orange-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-orange {
+    color: #FF6B00;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--secondary);
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: var(--primary);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--primary);
+}
+
+/* Hero Slider */
+.hero-slider {
+    margin-bottom: 30px;
+}
+
+.carousel-item {
+    height: 500px;
+    position: relative;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    bottom: 50px;
+}
+
+.carousel-caption h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Section Styling */
+.section-title {
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.section-title.text-center:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* News Cards */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Stats Styling */
+.school-stats {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--orange-dark) 100%);
+}
+
+.stat-item i {
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Quick Links */
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: var(--primary);
+    transition: all 0.3s;
+}
+
+.card:hover .icon-wrapper {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Footer Styling */
+footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary) !important;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+.copyright {
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .carousel-item {
+        height: 400px;
+    }
+    .carousel-caption {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel-item {
+        height: 300px;
+    }
+    .carousel-caption {
+        bottom: 10px;
+        padding: 10px;
+    }
+    .carousel-caption h2 {
+        font-size: 20px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
+}
